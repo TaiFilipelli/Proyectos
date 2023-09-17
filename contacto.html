@@ -4,13 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Jordan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="public/chodn.ico" type="image/x-icon">
     <style>
         body{
-            background-color: black;
+            background-color: rgb(15, 15, 15);
+            background-image: url(images/fondo2contacto.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .cont-titulo{
+            margin-left: auto;
+        }
+        .titulo{
+            font-family:'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 5em;
+            color: #fff;
+        }
+        .box{
+            border-radius: 6px;
+            background-color: #fff;
+            width: 100%;
+            background-image: url(images/fondo\ contacto.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        h3{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 50px;
+            padding-top: 0px;
+            margin-top: 0px;
+        }
+        .logo-cont{
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            padding-bottom: 20px;
+        }
+        .inputs{
+            margin-bottom: 5px;
+        }
+        .input-texto{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+        .campo{
+            border-radius: 5px;
+            width: 50%;
+            height: 20px;
+            padding: 8px;
+            border: 2px solid #000;
+        }
+        .titulo-form{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 45px;
+        }
+        @media screen and (width<=568px){
+            .navbar{
+                flex-direction: column;
+                gap: 8px;
+            }
+            body{
+                margin-top: 150px;
+            }
+            .input-texto{margin-left: 5px;}
+            .campo{margin-left: 5px;}
+            .titulo-form{
+                font-size: 40px;
+            }
+            .boton{margin-left: 5px;}
+            .titulo{font-size: 4em;}
+            .box{width: 170%;}
+        }
+        .boton{
+            border-radius: 5px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #000;
+            color: #fff;
+            width: 150px;
+            height: 40px;
+            font-size: 20px;
+            transition: background-color 0.4s;
+        }
+        .boton:hover{
+            background-color: #fff;
+            color: #000;
+        }
+        .redes{
+            color: #fff;
+        }
+        h4{
+            color: #fff;
+        }
+        .socialmedia{
+            display: flex;
+            justify-content: flex-start;
+        }
+        .red{
+            margin-left: 50px;
         }
     </style>
 </head>
 <body>
-
+    <div class="espacio"></div>
+    <div class="conten_navbar">
+        <nav class="navbar">
+            <img src="https://1000marcas.net/wp-content/uploads/2020/01/Air-Jordan-Logo.jpg" 
+            alt="Logo Jordan" width="90px">
+            <a href="JORDAN_AIR.html" class="nav-item">Destacados</a>
+            <a href="indumentaria.html" class="nav-item">Indumentaria</a>
+            <a href="aboutus.html" class="nav-item">About Us</a>
+        </nav>
+    </div>
+    <div class="cont-titulo">
+        <h1 class="titulo">La innovación y vanguardia de Air Jordan está a <br> un solo click de distancia. </h1>
+    </div>
+    <div class="box">
+        <div class="logo-cont"><p class="input-texto">Air Jordan</p><img src="images/JORDAN negro.png" alt="Logo Jordan" width="90px"></div>
+        <h3 class="titulo-form">Únete a la comunidad, contactate con nosotros!</h3>
+        <form>
+            <section class="inputs">
+                <label class="input-texto" for="nombre">Nombre completo <br></label>
+                <input type="text" class="campo" id="nombre" name="nombre" autocomplete="off" required>
+                <label for="correo" class="input-texto"><br>Correo electrónico <br></label>
+                <input type="email" class="campo" id="correo" name="correo" autocomplete="off" required>
+                <label for="numero" class="input-texto"><br>Número de contacto (opcional) <br></label>
+                <input type="number" class="campo" id="numero" name="numero" autocomplete="off" inputmode="numeric">
+                <br><br><br>
+                <button class="boton">Registrarme</button>
+                <br><br>
+            </section>
+        </form>
+    </div>
+    <h3 class="redes">Redes sociales oficiales</h3>
+    <section class="socialmedia">
+        <a href="https://twitter.com/Nike" target="_blank"><img src="images/LOGO TWITTER.png" alt="logo X" width=70px class="red"></a>
+        <a href="https://www.facebook.com/nike" target="_blank"><img src="images/LOGO FACEBOOK.png" alt="logo facebook" width=70px class="red"></a>
+        <a href="https://www.youtube.com/channel/UCUFgkRb0ZHc4Rpq15VRCICA" target="_blank"><img src="images/logo u2.png" alt="logo u2" width=70px class="red"></a>
+        <a href="https://www.instagram.com/nike/" target="_blank"><img src="images/LOGO IG.png" alt="logo IG" width="70px" class="red"></a>
+    </section>
 </body>
 </html>
