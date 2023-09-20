@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="public/chodn.ico">
     <title>Indumentaria | Jordan </title>
     <style>
         body{
             background-image: url(images/fondoindumentaria.jpg);
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
         .espacio{
             height: 30px;
@@ -21,30 +23,31 @@
             z-index: 1000;
         }
         .navbar{
-            background-color: #000;
             padding: 8px;
             color: #ffff;
             display: flex;
             justify-content: space-evenly;
         }
         .nav-item{
-            color: #ffff;
+            color: #000;
             text-decoration: none;
             padding: 10px;
             font-family:'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 22px;
+            font-size: 30px;
             border-radius: 4px;
-            transition: background-color 0.6s;
+            transition: color 0.6s, transform 0.6s;
         }
         .nav-item:hover{
-            background-color: #ffffffb6;
-            color: #000;
-            border-radius: 4px;
+            color: red;
+            transform: scale(1.2);
         }
         @media (width<=568px){
             .navbar{
                 flex-direction: column;
                 gap: 8px;
+            }
+            body{
+                margin-top: 150px;
             }
         }
         .container-ropa{
@@ -57,8 +60,7 @@
             font-size: 60px;
             display: flex;
             justify-content: center;
-            background-color: #000;
-            color: #ffff;
+            color: #000;
             border-radius: 6px;
             padding: 0;
         }
@@ -69,35 +71,104 @@
             color: #000;
             border-radius: 10px;
             transition: 0.5s;
+            padding-top: 40px;
         }
         .titulos:hover{
             color: #000;
-            transform: translateY(-10px);
+            transform: translateY(15px);
         }
         .RopaJordan{
-            padding-left: 220px;
+            padding-left: 150px;
+            opacity: 0.7;
+            transition: opacity 0.4s;
+            border-radius: 4px;
+            width:800px;
+            height: 800px;
         }
+        .RopaJordan:hover{
+            opacity: 1;
+        }
+        #ropa{
+            margin-top: 0;
+        }
+        #ropa2{
+            margin-top: 300px;
+        }
+        .banner{
+            width: 50%;
+        }
+        .titulo2{
+            padding-top: 30px;
+            font-size: 40px;
+            font-family:'Arial Narrow Bold', sans-serif;
+        }
+       .catalogoh{
+        position: relative;
+        width: 50%;
+        height: 50%;
+        overflow: hidden;
+        margin: 0;
+       }
+       .prendaH1{
+        width: 450px;
+        transition: opacity 1.6s,transform 1.6s;
+       }
+       #imagen2{
+        opacity: 0;
+       }
+       .catalogoh:hover #imagen{
+        opacity: 0;
+       }
+       .catalogoh:hover #imagen2{
+        opacity: 1;
+        transform: translateX(-455px);
+       }
+       @media (width<=1800px){
+        .catalogoh:hover #imagen2{
+            opacity: 1;
+            transform: translateY(-565px);
+        }
+       }
+       .descripcion{
+        width: 50%;
+        display: flex;
+        justify-content: right;
+       }
+       @media (width<=922px){
+        .catalogoh{
+            width: 100%;
+            position: fixed;
+        }
+       }
     </style>
 </head>
 <body>
-    <div class="espacio"></div>
     <div class="conten_navbar">
         <nav class="navbar">
-            <img src="https://1000marcas.net/wp-content/uploads/2020/01/Air-Jordan-Logo.jpg" 
-            alt="Logo Jordan" width="90px">
+            <img src="images/JORDAN negro.png" 
+            alt="Logo Jordan" width="50px">
             <a href="JORDAN_AIR.html" class="nav-item">Destacados</a>
-            <a href="indumentaria.html" class="nav-item">Indumentaria</a>
             <a href="#Hombre" class="nav-item">Hombres</a>
             <a href="#Mujer" class="nav-item">Mujeres</a>
         </nav>
     </div>
-    <h1 class="headers">Indumentaria</h1>
     <div class="container-ropa">
-        <img src="images/modelos1.jpg" alt="RopaJordan" width="800px"><img src="images/modelos2.jpg"
-         alt="pareja de modelos" class="RopaJordan" width="800px">
+        <img src="images/modelos1.jpg" alt="RopaJordan" class="RopaJordan" id="ropa"><img src="images/modelos2.jpg"
+         alt="pareja de modelos" class="RopaJordan" id="ropa2">
     </div>
     <h1 class="titulos">
     Bienvenido a Indumentaria Air Jordan, el futuro de la moda
     </h1>
+    <h3 class="titulo2">HOMBRE</h3>
+        <div class="catalogo-hombres">
+            <div class="catalogoh">
+                <img src="images/hombre1.jpg" class="prendaH1" id="imagen">
+                <img src="images/hombre1-2.jpg" class="prendaH1" id="imagen2">
+            </div>
+            <div class="descripcion">
+                <h1 class="nombre-art">Conjunto negro Jumpman</h1> <br><br>
+                <h3 class="subtitulo">El icónico Jumpman se abre paso en un conjunto negro con suaves colores grisáceos</h3>
+            </div>
+        </div>
 </body>
 </html>
