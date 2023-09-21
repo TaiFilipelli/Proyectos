@@ -232,6 +232,9 @@ body{
         width: 600px;
         padding-left: 240px;
     }
+    body{
+        margin-top: 200px;
+    }
 }
 @media(max-width:1400px){
     .estantes{

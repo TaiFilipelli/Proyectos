@@ -35,19 +35,20 @@
             font-family:'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-size: 30px;
             border-radius: 4px;
-            transition: color 0.6s, transform 0.6s;
+            transition: color 0.6s, background-color 0.6s, transform 0.6s;
         }
         .nav-item:hover{
-            color: red;
-            transform: scale(1.2);
+            color: rgb(204, 211, 221);
+            background-color: #000;
+            transform: scale(1.10);
         }
-        @media (width<=568px){
+        @media (max-width:568px){
             .navbar{
                 flex-direction: column;
                 gap: 8px;
             }
-            body{
-                margin-top: 150px;
+            .nav-item{
+                font-size: 25px;
             }
         }
         .container-ropa{
@@ -78,12 +79,12 @@
             transform: translateY(15px);
         }
         .RopaJordan{
-            padding-left: 150px;
-            opacity: 0.7;
-            transition: opacity 0.4s;
+            padding-left: 80px;
+            opacity: 0.6;
+            transition: opacity 0.7s;
             border-radius: 4px;
             width:800px;
-            height: 800px;
+            height:800px;
         }
         .RopaJordan:hover{
             opacity: 1;
@@ -102,44 +103,150 @@
             font-size: 40px;
             font-family:'Arial Narrow Bold', sans-serif;
         }
-       .catalogoh{
-        position: relative;
-        width: 50%;
-        height: 50%;
-        overflow: hidden;
-        margin: 0;
+       .descripcion{
+        padding-left: 350px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
        }
        .prendaH1{
-        width: 450px;
-        transition: opacity 1.6s,transform 1.6s;
-       }
-       #imagen2{
-        opacity: 0;
-       }
-       .catalogoh:hover #imagen{
-        opacity: 0;
-       }
-       .catalogoh:hover #imagen2{
-        opacity: 1;
-        transform: translateX(-455px);
-       }
-       @media (width<=1800px){
-        .catalogoh:hover #imagen2{
-            opacity: 1;
-            transform: translateY(-565px);
-        }
+        width: 400px;
        }
        .descripcion{
         width: 50%;
         display: flex;
-        justify-content: right;
+        justify-content: center;
        }
-       @media (width<=922px){
-        .catalogoh{
+       @media (max-width:852px){
+        .producto{
             width: 100%;
-            position: fixed;
+        }
+        .prendaH1{
+            width: 100%;
+        }
+        .fila-producto{
+            width: 100%;
+        }
+        .comprar{
+            width: 100%;
         }
        }
+       .cont-titulo{
+        display: flex;
+        justify-content: center ;
+       }
+       .fila-producto{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+       }
+       .producto{
+        width:50%;
+        box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        background-color: #ffff;
+        padding-bottom: 20px;
+       }
+       .nombre-art{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 30px;
+        padding-top: 20px;
+       }
+       .descripcion{
+        font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+        padding: 20px;  
+       }
+       .comprar{
+        border-radius: 6px;
+        background-color: #000;
+        color: #ffff;
+        font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+        padding: 10px 20px;
+        height: 40px;
+        width: 150px;
+        margin-top: 20px;
+        transition: background-color 0.5s,color 0.5s;
+       }
+       .comprar:hover{
+        background-color: #b3b2b2;
+        color: #000;
+       }
+       .descr{
+        display: flex;
+        justify-content: center;
+        margin: 0 0;
+        padding: 0;
+       }
+       @media (max-width:1590px){
+        .RopaJordan{
+            width: 700px;
+            height: 700px;
+        }
+        }
+        @media(max-width:1400px){
+            .RopaJordan{
+                width: 500px;
+                height: 500px;
+            }
+        }
+        @media(max-width:1000px){
+            .RopaJordan{
+                width: 350px;
+                height: 350px;
+            }
+            .container-ropa{
+                flex-direction: column;
+            }
+            #ropa2{
+                margin: 0;
+                margin-top: 20px;
+            }
+            body{
+                margin-top: 100px;
+            }
+        }
+        @media (max-width:340px){
+            .RopaJordan{
+                padding-left: 150px;
+            }
+            .titulos{
+                padding-left: 100px;
+                padding-top: 0;
+                font-size: 50px;
+            }
+            body{
+                margin-top: 600px;
+            }
+        }
+        @media (max-width:350px){
+            .comprar{
+                font-size:15px;
+                width: 80%;
+            }
+            .fila-producto{
+                width: 100%;
+                padding-left: 22px;
+            }
+            .descr{
+                width: 100%;
+            }
+            .producto{
+                width: 400px;
+            }
+            .titulos{
+                padding-left: 60px;
+            }
+            .RopaJordan{
+                padding-left: 30px;
+            }
+            body{
+                margin-top: 300px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -159,16 +266,113 @@
     <h1 class="titulos">
     Bienvenido a Indumentaria Air Jordan, el futuro de la moda
     </h1>
-    <h3 class="titulo2">HOMBRE</h3>
-        <div class="catalogo-hombres">
-            <div class="catalogoh">
-                <img src="images/hombre1.jpg" class="prendaH1" id="imagen">
-                <img src="images/hombre1-2.jpg" class="prendaH1" id="imagen2">
+    <div class="cont-titulo">
+        <h3 class="titulo2" id="Hombre">HOMBRE</h3>
+    </div>
+    <section>
+            <div class="fila-producto">
+                    <div class="producto">
+                        <h1 class="nombre-art">Conjunto Jordan Jumpman</h1>
+                        <div class="descr">
+                            <h3 class="descripcion">Disfruta de este increible pero discreto conjunto de Jumpman. De colores negros, tonos grises y excelente calidad de materiales, demuestra que el negro nunca pasa de moda</h3>
+                        </div>
+                        <img src="images/hombre1.jpg" alt="conjunto Jordan" class="prendaH1">
+                        <img src="images/hombre1-2.jpg" alt="conjunto Jordan2" class="prendaH1"> <br>
+                        <button type="submit" class="comprar">COMPRAR</button>
+                    </div>
             </div>
-            <div class="descripcion">
-                <h1 class="nombre-art">Conjunto negro Jumpman</h1> <br><br>
-                <h3 class="subtitulo">El icónico Jumpman se abre paso en un conjunto negro con suaves colores grisáceos</h3>
+                    <div class="espacio"></div>
+            <div class="fila-producto">
+                    <div class="producto">
+                        <h1 class="nombre-art">Buzo Jordan Flight MVP</h1>
+                        <div class="descr">
+                            <h3 class="descripcion">Clase, discreción y calidez: nada mejor que derrochar estilo y diversión con el mejor (y su aprobación) detrás tuyo. Incluye una divertida estampa en la espalda y el logo de calidad en el frente.</h3>
+                        </div>
+                        <img src="images/hombre2.jpg" alt="conjunto Jordan" class="prendaH1">
+                        <img src="images/hombre2-2.jpg" alt="conjunto Jordan2" class="prendaH1">
+                        <button type="submit" class="comprar">COMPRAR</button>
+                    </div>
+                </div>
+                    <div class="espacio"></div>
+            <div class="fila-producto">
+                    <div class="producto">
+                        <h1 class="nombre-art">Conjunto Jordan Flight</h1>
+                        <div class="descr">
+                            <h3 class="descripcion">Con un apartado visual más vistoso y urbano, puedes dominar las calles sin competencia. Compatible con TODO lo que desees añadirle, en especial contigo.</h3>
+                        </div>
+                        <img src="images/hombre3.jpg" alt="conjunto Jordan" class="prendaH1">
+                        <img src="images/hombre3-2.jpg" alt="conjunto Jordan2" class="prendaH1">
+                        <button type="submit" class="comprar">COMPRAR</button>
+                    </div>
+                </div>  
+                    <div class="espacio"></div>
+            <div class="fila-producto">
+                    <div class="producto">
+                        <h1 class="nombre-art">Conjunto Jordan Essentials</h1>
+                        <div class="descr">
+                            <h3 class="descripcion">Distendido, clásico, distinto. Como tu. La serie 'Essentials' dispone de prendas indispensables para todo aquel que desee hacerse ver de la forma más discreta y elegante posible.</h3>
+                        </div>
+                        <img src="images/hombre4.jpg" alt="conjunto Jordan" class="prendaH1">
+                        <img src="images/hombre4-2.jpg" alt="conjunto Jordan2" class="prendaH1">
+                        <button type="submit" class="comprar">COMPRAR</button>
+                    </div>
+                </div>
+                    <div class="espacio"></div>
             </div>
-        </div>
+            <div class="cont-titulo">
+                <h3 class="titulo2" id="Mujer">MUJER</h3>
+            </div>
+            <div class="fila-producto">
+                <div class="producto">
+                    <h1 class="nombre-art">Jordan 23 Engineered Chicago</h1>
+                    <div class="descr">
+                        <h3 class="descripcion">Inspirado en los tirantes que sacudieron los '90, llegan estos pants renovados y modernizados para que hagas honor a una época dorada de la moda pasada con un toque innovador y moderno</h3>
+                    </div>
+                    <img src="images/mujer1.jpg" alt="conjunto Jordan" class="prendaH1">
+                    <img src="images/mujer1-2.jpg" alt="conjunto Jordan2" class="prendaH1">
+                    <button type="submit" class="comprar">COMPRAR</button>
+                </div>
+            </div>
+                <div class="espacio"></div>
+                <div class="fila-producto">
+                    <div class="producto">
+                        <h1 class="nombre-art">Jordan Brooklyn</h1>
+                        <div class="descr">
+                            <h3 class="descripcion">Discreto, simple, vibrante y único. El bordado de la marca, su color agradable y su diseño cómodo hacen de este conjunto un indispensable en tu ropero.</h3>
+                        </div>
+                        <img src="images/mujer2.jpg" alt="conjunto Jordan" class="prendaH1">
+                        <img src="images/mujer2-2.jpg" alt="conjunto Jordan2" class="prendaH1">
+                        <button type="submit" class="comprar">COMPRAR</button>
+                    </div>
+                </div>
+                <div class="espacio"></div>
+                <div class="fila-producto">
+                    <div class="producto">
+                        <h1 class="nombre-art">Jordan Flight</h1>
+                        <div class="descr">
+                            <h3 class="descripcion">A pesar que, en principio, Air Jordan parecen solo zapatillas, es algo mucho más grande. Esta remera de 100% algodón, demuestra que somos mucho más que solo eso.</h3>
+                        </div>
+                        <img src="images/mujer3.jpg" alt="conjunto Jordan" class="prendaH1">
+                        <img src="images/mujer3-2.jpg" alt="conjunto Jordan2" class="prendaH1">
+                        <button type="submit" class="comprar">COMPRAR</button>
+                    </div>
+                </div>
+                <div class="espacio"></div>
+                <div class="fila-producto">
+                    <div class="producto">
+                        <h1 class="nombre-art">Sudadera Jordan</h1>
+                        <div class="descr">
+                            <h3 class="descripcion">La mejor compañera para aquellos que encuentran en el running y el deporte algo más que solo un hobby. Dispone una tela super transpirable y diseñada para tu comodidad.</h3>
+                        </div>
+                        <img src="images/mujer4.jpg" alt="conjunto Jordan" class="prendaH1">
+                        <img src="images/mujer4-2.jpg" alt="conjunto Jordan2" class="prendaH1">
+                        <button type="submit" class="comprar">COMPRAR</button>
+                    </div>
+                </div>
+    </section>
 </body>
+<footer>
+    <hr>
+    <p>&copy; 2023 Air Jordan, Nike - Todos los derechos reservados</p>
+</footer>
 </html>
